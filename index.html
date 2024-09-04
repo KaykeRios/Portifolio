@@ -3,32 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pórtifolio</title>
+    <title>Portfólio</title>
     <style>
         .imagem-com-borda {
             border: 5px solid #000; 
             padding: 7px;
-            border-radius: 70px; 
-            margin-left: 30px;
+            border-radius: 600px; 
+            margin-right: 30px; 
             background-color: rgb(255, 255, 255);
         }
-        body{
+        body {
             background-color: bisque;
             font-family: Arial, Helvetica, sans-serif;
         }
-        h1{
-            margin-left: 20px;
-            background-color: crimson;   
-            padding: 5px;  
-                         
+        .container {
+            display: flex;
+            align-items: flex-start; 
         }
-        
-        
+        .text-container {
+            display: flex;
+            flex-direction: column; 
+        }
+        .hidden-text {
+            display: none;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .show-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function toggleText(id) {
+            var sections = document.getElementsByClassName("hidden-text");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";  // Esconde todos os textos
+            }
+            var textElement = document.getElementById(id);
+            textElement.style.display = "block";  // Mostra o texto do botão clicado
+        }
+    </script>
 </head>
 <body>
-    <h1>Pórtifolio de Kayke Rios de Paula</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="ìcone" class="imagem-com-borda" width="100px" height="100px"><p>teste</p>
+    <div class="container">
+        <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="ícone" class="imagem-com-borda" width="200px" height="200px">
+        <div class="text-container">
+            <h1>Portfólio de Kayke Rios de Paula</h1>
+            <p>Sou um desenvolvedor apaixonado por tecnologia e programação, buscando sempre aprimorar minhas habilidades e alcançar novos desafios na área de tecnologia.</p>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="show-button" onclick="toggleText('conquistasText')">Conquistas & Projetos</button>
+        <button class="show-button" onclick="toggleText('objetivosText')">Objetivos</button>
+    </div>
     
+    <div id="conquistasText" class="hidden-text">
+        <h2>Conquistas</h2>
+        <ul>
+            <li>1º lugar na OBMEP de Linhares em 2022 durante o ensino médio.</li>
+            <li>2º lugar no vestibular de Jogos Digitais na FAESA.</li>
+        </ul>
+        <h2>Projetos</h2>
+        <p>Estou atualmente trabalhando em um protótipo de um sistema de seleção de classes e origens para jogos de RPG, além de estudar Java para aprimorar minhas habilidades em programação.</p>
+    </div>
+
+    <div id="objetivosText" class="hidden-text">
+        <h2>Objetivos</h2>
+        <p>Meu principal objetivo é me tornar um desenvolvedor de destaque na área de tecnologia, assumindo posições de liderança e contribuindo para o desenvolvimento de soluções inovadoras. Além disso, busco aprimorar continuamente minhas habilidades técnicas e alcançar crescimento tanto pessoal quanto profissional.</p>
+    </div>
 </body>
 </html>
