@@ -4,46 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
-    <style>
-        .imagem-com-borda {
-            border: 5px solid #000; 
-            padding: 7px;
-            border-radius: 600px; 
-            margin-right: 30px; 
-            background-color: rgb(255, 255, 255);
-        }
-        body {
-            background-color: bisque;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .container {
-            display: flex;
-            align-items: flex-start; 
-        }
-        .text-container {
-            display: flex;
-            flex-direction: column; 
-        }
-        .hidden-text {
-            display: none;
-            margin-top: 15px;
-            font-size: 16px;
-        }
-        .button-container {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .show-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #000;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <script>
         function toggleText(id) {
             var sections = document.getElementsByClassName("hidden-text");
@@ -82,6 +43,12 @@
     <div id="objetivosText" class="hidden-text">
         <h2>Objetivos</h2>
         <p>Meu principal objetivo é me tornar um desenvolvedor de destaque na área de tecnologia, assumindo posições de liderança e contribuindo para o desenvolvimento de soluções inovadoras. Além disso, busco aprimorar continuamente minhas habilidades técnicas e alcançar crescimento tanto pessoal quanto profissional.</p>
+    </div>
+
+    <div class="social-links">
+        <a href="#" class="social-link">GitHub</a>
+        <a href="#" class="social-link">LinkedIn</a>
+        <a href="#" class="social-link">Instagram</a>
     </div>
 </body>
 </html>
