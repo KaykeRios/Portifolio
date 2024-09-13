@@ -41,7 +41,7 @@ body {
     bottom: 10px;
     left: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
 }
 .social-link {

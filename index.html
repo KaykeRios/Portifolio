@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function toggleText(id) {
-            var sections = document.getElementsByClassName("hidden-text");
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].style.display = "none";  
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link para Font Awesome -->
+        <script>
+            function toggleText(id) {
+                var sections = document.getElementsByClassName("hidden-text");
+                for (var i = 0; i < sections.length; i++) {
+                    sections[i].style.display = "none";  
+                }
+                var textElement = document.getElementById(id);
+                textElement.style.display = "block";  
             }
-            var textElement = document.getElementById(id);
-            textElement.style.display = "block";  
-        }
-    </script>
-</head>
+        </script>
+    </head>
 <body>
     <div class="container">
         <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="ícone" class="imagem-com-borda" width="200px" height="200px">
@@ -45,10 +46,17 @@
         <p>Meu principal objetivo é me tornar um desenvolvedor de destaque na área de tecnologia, assumindo posições de liderança e contribuindo para o desenvolvimento de soluções inovadoras. Além disso, busco aprimorar continuamente minhas habilidades técnicas e alcançar crescimento tanto pessoal quanto profissional.</p>
     </div>
 
+    
     <div class="social-links">
-        <a href="#" class="social-link">GitHub</a>
-        <a href="#" class="social-link">LinkedIn</a>
-        <a href="#" class="social-link">Instagram</a>
+        <a href="https://github.com/KaykeRios" class="social-link" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kayke-rios-de-paula-34b5bb308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/kaykerioss?igsh=MXQ2YzkxbWZ6Nzl3Mw==" class="social-link" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
     </div>
 </body>
 </html>
