@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfólio</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link para Font Awesome -->
-        <script>
-            function toggleText(id) {
-                var sections = document.getElementsByClassName("hidden-text");
-                for (var i = 0; i < sections.length; i++) {
-                    sections[i].style.display = "none";  
-                }
-                var textElement = document.getElementById(id);
-                textElement.style.display = "block";  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link para a biblioteca Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function toggleText(id) {
+            var sections = document.getElementsByClassName("hidden-text");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";  
             }
-        </script>
-    </head>
+            var textElement = document.getElementById(id);
+            textElement.style.display = "block";  
+        }
+    </script>
+</head>
 <body>
+    <header>
+        <h1>Portfólio de Kayke Rios de Paula</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="toggleText('conquistasText')">Conquistas & Projetos</a></li>
+            <li><a href="#" onclick="toggleText('objetivosText')">Objetivos</a></li>
+            <li><a href="#" onclick="toggleText('habilidadesText')">Habilidades</a></li> <!-- Novo botão -->
+        </ul>
+    </nav>
+
     <div class="container">
-        <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="ícone" class="imagem-com-borda" width="200px" height="200px">
-        <div class="text-container">
-            <h1>Portfólio de Kayke Rios de Paula</h1>
-            <p>Sou um desenvolvedor apaixonado por tecnologia e programação, buscando sempre aprimorar minhas habilidades e alcançar novos desafios na área de tecnologia.</p>
+        <div class="profile-section">
+            <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="ícone" class="imagem-com-borda" width="200px" height="200px">
+            <div class="text-container">
+                <p>Sou um desenvolvedor apaixonado por tecnologia e programação, buscando sempre aprimorar minhas habilidades e alcançar novos desafios na área de tecnologia.</p>
+            </div>
+        </div>
+
+        <div id="conquistasText" class="hidden-text">
+            <h2>Conquistas</h2>
+            <ul>
+                <li>1º lugar na OBMEP de Linhares em 2022 durante o ensino médio.</li>
+                <li>2º lugar no vestibular de Jogos Digitais na FAESA.</li>
+            </ul>
+            <h2>Projetos</h2>
+            <p>Estou atualmente trabalhando em um protótipo de um sistema de seleção de classes e origens para jogos de RPG, além de estudar Java para aprimorar minhas habilidades em programação.</p>
+        </div>
+
+        <div id="objetivosText" class="hidden-text">
+            <h2>Objetivos</h2>
+            <p>Meu principal objetivo é me tornar um desenvolvedor de destaque na área de tecnologia, assumindo posições de liderança e contribuindo para o desenvolvimento de soluções inovadoras. Além disso, busco aprimorar continuamente minhas habilidades técnicas e alcançar crescimento tanto pessoal quanto profissional.</p>
+        </div>
+
+        
+        <div id="habilidadesText" class="hidden-text">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Programação em Python e Java.</li>
+                <li>Conhecimento básico em Excel, Word e PowerPoint.</li>
+                <li>Experiência básica em inglês, com boa capacidade de leitura e escrita.</li>
+            </ul>
         </div>
     </div>
 
-    <div class="button-container">
-        <button class="show-button" onclick="toggleText('conquistasText')">Conquistas & Projetos</button>
-        <button class="show-button" onclick="toggleText('objetivosText')">Objetivos</button>
-    </div>
-    
-    <div id="conquistasText" class="hidden-text">
-        <h2>Conquistas</h2>
-        <ul>
-            <li>1º lugar na OBMEP de Linhares em 2022 durante o ensino médio.</li>
-            <li>2º lugar no vestibular de Jogos Digitais na FAESA.</li>
+    <footer>
+        <ul class="social-links">
+            <li><a href="https://github.com/KaykeRios" class="social-link"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/kayke-rios-de-paula-34b5bb308/" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/kaykerioss/?hl=en" class="social-link"><i class="fab fa-instagram"></i></a></li>
         </ul>
-        <h2>Projetos</h2>
-        <p>Estou atualmente trabalhando em um protótipo de um sistema de seleção de classes e origens para jogos de RPG, além de estudar Java para aprimorar minhas habilidades em programação.</p>
-    </div>
-
-    <div id="objetivosText" class="hidden-text">
-        <h2>Objetivos</h2>
-        <p>Meu principal objetivo é me tornar um desenvolvedor de destaque na área de tecnologia, assumindo posições de liderança e contribuindo para o desenvolvimento de soluções inovadoras. Além disso, busco aprimorar continuamente minhas habilidades técnicas e alcançar crescimento tanto pessoal quanto profissional.</p>
-    </div>
-
-    
-    <div class="social-links">
-        <a href="https://github.com/KaykeRios" class="social-link" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/kayke-rios-de-paula-34b5bb308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/kaykerioss?igsh=MXQ2YzkxbWZ6Nzl3Mw==" class="social-link" target="_blank" title="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
+        <p>© 2024 Kayke Rios de Paula - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
