@@ -50,7 +50,7 @@ nav ul li a:hover {
     text-align: justify;
     line-height: 1.6;
     flex-grow: 1;
-    min-height: calc(100vh - 160px); /* Ocupa o espaço restante da tela menos o header e o footer */
+    min-height: calc(100vh - 160px); 
 }
 
 .profile-section {
@@ -93,7 +93,7 @@ footer {
     text-align: center;
     justify-content: center;
     width: 98.96%;
-    margin-top: auto; /* Isso garante que o footer seja empurrado para o final da página */
+    margin-top: auto; 
     bottom: 0;
 }
 
@@ -168,10 +168,9 @@ ul {
 }
 
 .invertido {
-    flex-direction: row-reverse; /* Alinha a imagem à direita e o texto à esquerda */
+    flex-direction: row-reverse; 
 }
 
-/* Adicionando estilo para hover na imagem para maior interatividade */
 .projeto-imagem:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
