@@ -15,6 +15,10 @@
             var textElement = document.getElementById(id);
             textElement.style.display = "block";  
         }
+        // Função para mostrar o texto inicial ao carregar a página
+        window.onload = function() {
+            toggleText('inicioText');
+        };
     </script>
 </head>
 <body>
@@ -24,17 +28,19 @@
 
     <nav>
         <ul>
+            <li><a href="#" onclick="toggleText('inicioText')">Início</a></li>
             <li><a href="#" onclick="toggleText('conquistasText')">Conquistas & Projetos</a></li>
             <li><a href="#" onclick="toggleText('objetivosText')">Objetivos</a></li>
-            <li><a href="#" onclick="toggleText('habilidadesText')">Habilidades</a></li> 
         </ul>
     </nav>
 
     <div class="container">
-        <div class="profile-section">
-            <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="ícone" class="imagem-com-borda" width="200px" height="200px">
-            <div class="text-container">
-                <p>Sou um desenvolvedor apaixonado por tecnologia e programação, buscando sempre aprimorar minhas habilidades e alcançar novos desafios na área de tecnologia.</p>
+        <div id="inicioText" class="hidden-text">
+            <div class="profile-section">
+                <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="ícone" class="imagem-com-borda" width="200px" height="200px">
+                <div class="text-container">
+                    <p>Sou um desenvolvedor apaixonado por tecnologia e programação, buscando sempre aprimorar minhas habilidades e alcançar novos desafios na área de tecnologia.</p>
+                </div>
             </div>
         </div>
 
@@ -44,23 +50,28 @@
                 <li>1º lugar na OBMEP de Linhares em 2022 durante o ensino médio.</li>
                 <li>2º lugar no vestibular de Jogos Digitais na FAESA.</li>
             </ul>
+           
+
             <h2>Projetos</h2>
-            <p>Estou atualmente trabalhando em um protótipo de um sistema de seleção de classes e origens para jogos de RPG, além de estudar Java para aprimorar minhas habilidades em programação.</p>
+            <div class="profile-section">
+                <img src="Imagens/projeto.jpg" alt="Projeto Cadastro" class="imagem-com-borda" width="250px" height="250px">
+                   <div class="projeto-texto">
+                        <p>Neste projeto, meu grupo e eu desenvolvemos um sistema de cadastro para professores e alunos. Os alunos podem se cadastrar online e visualizar as áreas de ensino, professores disponíveis e os horários das aulas nas quais estão inscritos e disponíveis para eles. Já os professores têm a capacidade de adicionar, registrar e excluir as aulas que ministram, além de definir os horários e o valor da hora-aula.</p>
+                    </div>
+                </div>
+                <div class="profile-section invertido"> 
+                    <img src="Imagens/Ordem.png" alt="Projeto RPG" class="imagem-com-borda" width="250px" height="250px">
+                        <div class="text-container">
+                            <p>Esse protótipo de RPG explora diferentes classes e origens, permitindo que os jogadores personalizem seus personagens com base em habilidades e poderes únicos.</p>
+                            <p>Este protótipo foi inspirado no C.R.I.S, onde pode fazer fichas de forma automática. Então, eu e mais alguns colegas decidimos fazer um projeto para criar uma ferramenta gratuita e mais intuitiva para criar fichas.</p>
+                            <p>Aqui está o link para o Protótipo: <a href="https://kaykerios.github.io/Fazedor-de-Ficha/" target="_blank">Ordem Paranormal</a></p>
+                        </div>
+                </div>
         </div>
 
         <div id="objetivosText" class="hidden-text">
             <h2>Objetivos</h2>
-            <p>Meu principal objetivo é me tornar um desenvolvedor de destaque na área de tecnologia, assumindo posições de liderança e contribuindo para o desenvolvimento de soluções inovadoras. Além disso, busco aprimorar continuamente minhas habilidades técnicas e alcançar crescimento tanto pessoal quanto profissional.</p>
-        </div>
-
-        
-        <div id="habilidadesText" class="hidden-text">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Programação em Python e Java.</li>
-                <li>Conhecimento básico em Excel, Word e PowerPoint.</li>
-                <li>Experiência básica em inglês, com boa capacidade de leitura e escrita.</li>
-            </ul>
+            <p>Meu principal objetivo é me tornar um desenvolvedor de destaque na área de tecnologia, assumindo posições de liderança e contribuindo para o desenvolvimento de soluções inovadoras. Almejo alcançar cargos de alta relevância no setor de programação, onde possa atuar tanto no front-end quanto no back-end, posicionando-me como um programador fullstack completo. Além disso, busco aprimorar continuamente minhas habilidades técnicas, mantendo-me atualizado com as últimas tendências e ferramentas do mercado. Pretendo, ao longo da minha carreira, ser reconhecido pela minha versatilidade e capacidade de entregar resultados em todas as etapas do desenvolvimento de software. A melhoria contínua, tanto nas minhas competências quanto no meu desempenho, é uma meta que cultivo para alcançar crescimento pessoal e profissional, sempre com o foco em liderar projetos e oferecer soluções eficientes e impactantes.</p>
         </div>
     </div>
 
